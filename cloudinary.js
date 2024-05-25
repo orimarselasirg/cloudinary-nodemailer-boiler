@@ -10,7 +10,7 @@ cloudinary.config({
   api_secret: CLOUDINARY_API_SECRET_PROCURE 
 });
 
-const uploadImage = (image, public_id) => {
+export const uploadImage = (image, public_id) => {
   cloudinary.uploader.upload(image,
     { 
       public_id: public_id }, 
@@ -25,7 +25,7 @@ const uploadImage = (image, public_id) => {
     );
 }
 
-const deleteImage = (public_id) => {
+export const deleteImage = (public_id) => {
   cloudinary.uploader.destroy(public_id, (error, {result}) => {
     if (error) {
       console.log('error', error)
