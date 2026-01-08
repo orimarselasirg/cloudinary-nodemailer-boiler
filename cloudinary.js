@@ -38,3 +38,6 @@ export const deleteImage = (public_id) => {
 
 // uploadImage('./1565566914202.jpeg', 'miprueba')
 deleteImage('miprueba')
+
+
+console.log(process.env.CLOUDINARY_NAME_PROCURE)
